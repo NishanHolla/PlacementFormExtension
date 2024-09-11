@@ -23,12 +23,19 @@
     });
   }
 
-  // Function to fill out the Google Form by targeting divs with data-params
+  // Function to fill out the Google Form by targeting divs with data-params and input fields
   function fillForm() {
+    // Handle the email input field directly without checking data-params
+    const emailInput = document.querySelector('input[type="email"]');
+    if (emailInput) {
+      emailInput.value = formData.email;
+    }
+
+    // Handle other fields by checking data-params
     document.querySelectorAll('div[data-params]').forEach(div => {
       const dataParams = div.getAttribute('data-params');
-      
-      // Check for specific field names (SRN, Name, Degree, Gender, etc.) in the data-params attribute
+
+      // Handle specific field names (SRN, Name, etc.)
       if (dataParams.includes('SRN')) {
         const inputField = div.querySelector('input[type="text"]');
         if (inputField) inputField.value = formData.srn;
