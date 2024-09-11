@@ -23,12 +23,19 @@
     });
   }
 
+  const setInputValue = (inputField, value) => {
+    inputField.value = value;
+    // Dispatch 'input' event to notify form of the change
+    const event = new Event('input', { bubbles: true });
+    inputField.dispatchEvent(event);
+  };
+
   // Function to fill out the Google Form by targeting divs with data-params and input fields
   function fillForm() {
     // Handle the email input field directly without checking data-params
     const emailInput = document.querySelector('input[type="email"]');
     if (emailInput) {
-      emailInput.value = formData.email;
+      setInputValue(inputField, formData.email);
     }
 
     // Handle other fields by checking data-params
@@ -38,29 +45,43 @@
       // Handle specific field names (SRN, Name, etc.)
       if (dataParams.includes('SRN')) {
         const inputField = div.querySelector('input[type="text"]');
-        if (inputField) inputField.value = formData.srn;
+        if (inputField) setInputValue(inputField, formData.srn);
       }
       if (dataParams.includes('Name')) {
         const inputField = div.querySelector('input[type="text"]');
-        if (inputField) inputField.value = formData.name;
+        if (inputField) setInputValue(inputField, formData.name);
       }
       if (dataParams.includes('10th')) {
         const inputField = div.querySelector('input[type="text"]');
-        if (inputField) inputField.value = formData.tenth;
+        if (inputField) setInputValue(inputField, formData.tenth);
       }
       if (dataParams.includes('12th')) {
         const inputField = div.querySelector('input[type="text"]');
-        if (inputField) inputField.value = formData.twelfth;
+        if (inputField) setInputValue(inputField, formData.twelfth);
       }
       if (dataParams.includes('UG')) {
         const inputField = div.querySelector('input[type="text"]');
-        if (inputField) inputField.value = formData.ugCgpa;
+        if (inputField) setInputValue(inputField, formData.ugCgpa);
       }
       if (dataParams.includes('Mobile')) {
         const inputField = div.querySelector('input[type="text"]');
-        if (inputField) inputField.value = formData.mobile;
+        if (inputField) setInputValue(inputField, formData.mobile);
       }
 
+      if (dataParams.includes('Degree')) {
+        const inputField = div.querySelector('input[type="text"]');
+        if (inputField) setInputValue(inputField, formData.degree);
+      }
+      if (dataParams.includes('Gender')) {
+        const inputField = div.querySelector('input[type="text"]');
+        if (inputField) setInputValue(inputField, formData.gender);
+      }
+      if (dataParams.includes('Branch')) {
+        const inputField = div.querySelector('input[type="text"]');
+        if (inputField) setInputValue(inputField, formData.branch);
+      }
+      
+    
       // Handle dropdowns for Degree, Gender, and Branch by simulating option selection
       if (dataParams.includes('Degree')) {
         const dropdown = div.querySelector('[role="listbox"]');
