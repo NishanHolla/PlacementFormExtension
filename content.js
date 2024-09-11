@@ -35,7 +35,7 @@
     // Handle the email input field directly without checking data-params
     const emailInput = document.querySelector('input[type="email"]');
     if (emailInput) {
-      setInputValue(inputField, formData.email);
+      setInputValue(emailInput, formData.email)
     }
 
     // Handle other fields by checking data-params
