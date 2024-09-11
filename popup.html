@@ -2,6 +2,25 @@
 <html>
   <head>
     <title>Google Form Auto Fill</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 200px;
+        padding: 10px;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
   </head>
   <body>
     <button id="fill-form">Fill Form</button>
@@ -9,8 +28,8 @@
     <script>
       document.getElementById("fill-form").addEventListener("click", () => {
         chrome.scripting.executeScript({
-          target: { tabId: chrome.tabs.TAB_ID_NONE },
-          function: fillForm,
+          target: { allFrames: true },
+          files: ['content.js']
         });
       });
     </script>
