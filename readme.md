@@ -80,7 +80,3 @@ This project is licensed under the MIT License.
 ---
 
 Made with ❤️ by Nishan Holla
-
----
-
-This version has the title updated to **Placement Form AutoFill Extension**, and the closing line with the heart emoji and your name added at the end.
