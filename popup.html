@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Form Auto Fill</title>
+  </head>
+  <body>
+    <button id="fill-form">Fill Form</button>
+
+    <script>
+      document.getElementById("fill-form").addEventListener("click", () => {
+        chrome.scripting.executeScript({
+          target: { tabId: chrome.tabs.TAB_ID_NONE },
+          function: fillForm,
+        });
+      });
+    </script>
+  </body>
+</html>
