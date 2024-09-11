@@ -1,7 +1,3 @@
-Here’s the updated `README.md` file with the new title and final line:
-
----
-
 # Placement Form AutoFill Extension
 
 We all know how tiring it can be to repeatedly fill in the same details on placement forms. This Chrome extension automates that process by pre-filling specific fields in Google Forms with your own details. You can easily customize the extension to suit your needs by adding your own data in `content.js`.
