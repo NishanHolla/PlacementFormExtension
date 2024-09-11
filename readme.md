@@ -12,7 +12,8 @@ This project is a Chrome extension that automatically fills out specific fields 
 
 Below is an image used in this project. It serves as an icon for the extension or in other visual elements of the project.
 
-![Project Image](path/to/your/image.png)
+![WhatsApp Image 2024-09-11 at 1 34 02 PM](https://github.com/user-attachments/assets/d3db159c-5722-4fb3-a785-2a956627fdf7)
+
 
 *This image is a visual representation and can be used in the extension UI or documentation.*
 
