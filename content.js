@@ -9,7 +9,7 @@
     branch: "CSE",
     tenth: "91.4",
     twelfth: "95",
-    ugCgpa: "7.67",
+    ugCgpa: "7.8",
     mobile: "8951621998"
   };
 
